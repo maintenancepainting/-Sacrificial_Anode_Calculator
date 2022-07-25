@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Sacrificial Anode Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
+
+</head>
+
+
+<body>
+
+    <div class="container text-center con1">
+        <h1>Sacrificial Anode Calculator</h1>
+    </div>
+    <div class="container ">
+        <div class="container-fluid row ">
+            <div class="container   col-md-6">
+                <h6>Data to be filled by location or vendor.</h6>
+                <form class="row g-3 needs-validation" novalidate onsubmit="calculate(); return false;">
+                    <div class="col-md-6">
+                        <label class="form-label">Anode Material:</label>
+                        <select class="form-select" id="materials" name="materials" required>
+                            <option selected disabled value="">Choose...</option>
+                            <option value="Alumf">Aluminium flush-mounted</option>
+                            <option value="Mgf">Magnesium flush-mounted</option>
+                            <option value="Znf">Zinc flush-mounted</option>
+                            <option value="Alums">Aluminium slender</option>
+                            <option value="Mgs">Magnesium slender</option>
+                            <option value="Zns">Zinc slender</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label">Dia of the tank(in meters):</label>
+                        <input type="number" class="form-select" step="0.01" id="one">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Height of the tank(in meters):</label>
+                        <input type="number" class="form-select" step="0.01" id="two">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Highest Temperature recorded:</label>
+                        <input type="number" class="form-select" step="0.01" id="three">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Length of Anode(in cm):</label>
+                        <input type="number" class="form-select" step="0.01" id="four">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Width of Anode(in cm):</label>
+                        <input type="number" class="form-select" step="0.01" id="five">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Height of anode(in cm):</label>
+                        <input type="number" class="form-select" step="0.01" id="eight">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Current Density at 25 degrees:</label>
+                        <input type="number" class="form-select" step="0.01" id="seven">
+                    </div>
+                    <div class="col-12">
+                        <label class="form-label">Electrical Resistivity of Elecrolyte (Water) (Ohm-cm):</label>
+                        <input type="number" class="form-select" step="0.01" id="six">
+                    </div>
+
+                    <div class="col-12">
+                        <button class="btn btn-outline-primary" type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+            <div class="container  col-md-6">
+                <h6 class="text-center ">Instruction</h6>
+                <div class="mb-3">
+                    <label class="form-label">Sacrificial Anode:</label>
+                    <input type="email" class="form-control" id="answer">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
+        </script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
